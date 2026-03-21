@@ -1,23 +1,22 @@
-console.log("js-paliedispari");
+console.log('js-paliedispari');
 
 // ** Palidroma **
 
 // Chiedere all’utente di inserire una parola
-const word = prompt ("Inserire una parola", );
+const word = prompt('Inserire una parola');
 
 // Creare una funzione per capire se la parola inserita è palindroma
 function isPalindroma(word) {
-const reversed = word.split("").reverse().join("");
-return word === reversed
+    const reversed = word.split("").reverse().join("");
+    return word === reversed
 }
 
 if (isPalindroma(word)) {
-    console.log("${word} è una parola palindroma");
-    
+    console.log(`${word} è una parola palindroma`);
 } else {
-    console.log(" ${word} non è una parola palindroma");
-    
+    console.log(`${word} non è una parola palindroma`);
 }
+
 
 
 /* Pari e Dispari
@@ -27,3 +26,4 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
+
