@@ -21,7 +21,10 @@ if (isPalindroma(word)) {
 
 // Chiedere all'utente la sua scelta (pari/dispari) e il suo numero
 
-// Generare un numero random per il computer
+// Generare un numero random per il computer 
+function generaNumeroComputer() {
+return Math.floor(Math.random() * 5 + 1);
+}
 
 // Sommare i due numeri e capire se è pari o dispari
 
