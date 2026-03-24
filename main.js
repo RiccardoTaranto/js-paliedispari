@@ -20,12 +20,16 @@ if (isPalindroma(word)) {
 // ** Pari e Dispari **
 
 // Chiedere all'utente la sua scelta (pari/dispari) e il suo numero
+let userNumb = prompt("scegli un numero tra 1 e 5");
+userNumb = parseInt(userNumb);
+let userChoice = prompt("scegli pari o dispari");
 
 // Generare un numero random per il computer 
-function generaNumeroComputer() {
+function computerNumber() {
 return Math.floor(Math.random() * 5 + 1);
 }
 
 // Sommare i due numeri e capire se è pari o dispari
+
 
 // Dichiarare il vincitore
