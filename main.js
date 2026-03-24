@@ -15,7 +15,7 @@ if (isPalindroma(word)) {
     console.log(`${word} è una parola palindroma`);
 } else {
     console.log(`${word} non è una parola palindroma`);
-}
+} */
 
 // ** Pari e Dispari **
 
@@ -26,10 +26,24 @@ let userChoice = prompt("scegli pari o dispari");
 
 // Generare un numero random per il computer 
 function computerNumber() {
-return Math.floor(Math.random() * 5 + 1);
+  return Math.floor(Math.random() * 5 + 1);
 }
 
-// Sommare i due numeri e capire se è pari o dispari
+// Controllare se un numero è pari o dispari
+function isPari(numero) {
+  return numero % 2 === 0;
+}
 
+// Generare il numero del computer
+let compNumb = computerNumber();
+
+// Sommare i due numeri e capire se è pari o dispari
+let somma = userNumb + compNumb;
+let risultato = isPari(somma);
 
 // Dichiarare il vincitore
+if (risultato === true && userChoice === "pari") {
+  console.log("Hai vinto!");
+} else {
+  console.log("Hai perso!");
+}
