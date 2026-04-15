@@ -3,19 +3,35 @@ console.log('js-paliedispari');
 // ** Palidroma ** ✅
 
 // Chiedere all’utente di inserire una parola
-const word = prompt('Inserire una parola');
+
+// const word = prompt('Inserire una parola');
+
+const word = 'ingegni';
 
 // Creare una funzione per capire se la parola inserita è palindroma
-function isPalindroma(word) {
-    const reversed = word.split("").reverse().join("");
-    return word === reversed
-}
 
-if (isPalindroma(word)) {
+
+
+const letters = [];
+for (let i = 0; i < word.length; i++) {
+    const letter = word[i];
+    letters.unshift(letter);
+}
+console.log(letters);
+
+
+//}
+
+/* if (isPalindroma(word)) {
     console.log(`${word} è una parola palindroma`);
 } else {
     console.log(`${word} non è una parola palindroma`);
 }
+    */
+
+
+
+/*
 
 // ** Pari e Dispari **
 
@@ -51,3 +67,5 @@ if (risultato === true && userChoice === "pari") {
 } else {
     console.log("Hai perso!");
 }
+
+*/
