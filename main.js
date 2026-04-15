@@ -6,18 +6,24 @@ console.log('js-paliedispari');
 
 // const word = prompt('Inserire una parola');
 
-const word = 'ingegni';
+const userWord = 'Ingegni';
 
 // Creare una funzione per capire se la parola inserita è palindroma
 
-
-
-const letters = [];
-for (let i = 0; i < word.length; i++) {
-    const letter = word[i];
-    letters.unshift(letter);
+function splitWord(word) {
+    const letters = [];
+    for (let i = 0; i < userWord.length; i++) {
+        const letter = userWord[i];
+        letters.unshift(letter);
+    }
+    console.log(letters);
+    return letters;
 }
-console.log(letters);
+
+const reverseWord = splitWord(userWord);
+console.log(reverseWord);
+
+
 
 
 //}
