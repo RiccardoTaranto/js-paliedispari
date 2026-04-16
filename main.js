@@ -3,49 +3,44 @@ console.log('js-paliedispari');
 // ** Palidroma ** ✅
 
 // Chiedere all’utente di inserire una parola
-
-// const word = prompt('Inserire una parola');
-
 const word = 'Ingegni';
 
 // Creare una funzione per capire se la parola inserita è palindroma
-
 function splitWord(userWord) {
     const letters = [];
     for (let i = 0; i < userWord.length; i++) {
-        const letter = userWord[i];
+        const letter = userWord[i]; //.lowerCase();
         letters.push(letter);
     }
     return letters;
 }
 
-const reverseWord = splitWord(word);
-console.log(reverseWord);
+const forwardWord = splitWord(word); // Array lettere originale
+console.log(forwardWord);
 
-const reverseLetters =[];
-for (i= reverseWord.length -1; i >= 0; i--){
-    const reverseLetter = reverseWord[i];
-    reverseLetters.push(reverseLetter);
+function revSplitWord(lettersArray) {
+    const reverseLetters = [];
+    for (let i = lettersArray.length - 1; i >= 0; i--) {
+        const reverseLetter = lettersArray[i];
+        reverseLetters.push(reverseLetter);
+    }
+    console.log(reverseLetters);
+    return reverseLetters;
+
 }
-console.log(reverseLetters);
 
+const reversedLetters = revSplitWord(originalLetters); // Array lettere invertite
 
+let isPalindroma = true;
 
-
-
-
-//}
-
-/* if (isPalindroma(word)) {
-    console.log(`${word} è una parola palindroma`);
-} else {
-    console.log(`${word} non è una parola palindroma`);
+for (let i = 0; i < originalLetters.length; i++) {
+    if (originalLetters[i] !== reversedLetters[i]) {
+        isPalindroma = false;
+    }
 }
-    */
 
 
 
-/*
 
 // ** Pari e Dispari **
 
